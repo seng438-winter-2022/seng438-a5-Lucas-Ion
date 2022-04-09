@@ -1,5 +1,8 @@
-# seng438-assignment-5
+# WELCOME TO THE REPOSITORY FOR SENG 438, GROUP 33
 
-# Guideline
-- read [assignment guideline](./Assignment5.md.md) 
-- commit and push output ([assignment output template](./Assignment5-ReportTemplate.md.md))
+# WHAT YOU WILL FIND IN THIS ASSIGNMENT REPOSITORY
+
+- You will find the Lab Report in the repository, this contains the complete lab report. It is titled: [***A5-Group33-Report.md***](https://github.com/seng438-winter-2022/seng438-a4-Lucas-Ion/blob/main/Assignment4-Group33-Report.md)
+
+
+# IF YOU HAVE ANY QUESTION PLEASE DO NOT HESITATE TO REACH OUT TO ANY OF US :)
