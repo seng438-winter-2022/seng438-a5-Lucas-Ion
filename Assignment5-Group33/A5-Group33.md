@@ -122,7 +122,6 @@ In the graphical aspect, the visualization between two methods are identical at 
 
 One of the explanations that describes the differences could be the complexity of RDC Testing's setup compared to RG Testing's. In RDC testing, to calculate the MTTF, we need to account for the Customer's risk threshold. Meanwhile, RG testing just simply calculate the average of all failure counts within the given intervals. For example, if we increase the customer's risk (beta) by some values, the accept boundary will be shifted to the left by a corresponding extent. By left-shifting the accept boundary, the result of MTTF will decrease as a response. 
 
-## **Comparison Results**
 ![Results](Result_Comparison.jpeg)
 
 # Discussion on Similarity and Differences of the Two Techniques
