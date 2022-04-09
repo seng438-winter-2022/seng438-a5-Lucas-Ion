@@ -11,7 +11,7 @@
 | Alden Lien                |   |
 
 # Introduction
-In this lab we were tasked with
+In this lab we were tasked with using and comparing two ways to analyze failure rates. For this lab the two tools we needed to use were C-SFRAT and an RDC Chart.
 # 
 
 # Assessment Using Reliability Growth Testing 
