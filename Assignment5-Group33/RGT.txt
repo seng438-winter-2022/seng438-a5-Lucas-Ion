@@ -1,0 +1,52 @@
+## Assessment using Reliability Growth Testing
+
+For this assessment, our team choose C-SFRAT as our tool. C-SFRAT provided us with variety of Hazard Functions such as: IFR Salvia & Bollinger (IFRSB), IFR Generalized Salvia & Bollinger (IFRGSB), S Distribution (S), Discrete Weibull (Order 2) (DW2), Discrete Weibull (Type III) (DW3), Geometric (GM), Negative Biominal (NB2), and Truncated Logistic(TL)
+
+### Model Comparision
+
+First of all, we chose the best 4 Hazard Functions based on their description and their fuctionality. These 4 Hazard Functions are IFRGSB, S, DW2, and GM.
+Reason why we pick 4 of these functions among the rest:
+	- Increasing Failure Rate (IFR) function that describes the increasing trend behavior of the number of failure as time increases. The use of this hazard 	function fits with our demand because as observing the given data, the number of failure is in an increasing trend.
+	- S-Distribution is used for case that has standard normally distributed lesser than 0.5 or with small data. And our given data is considered as a small set of 	that where z-scores should not be too high.
+	- Geometric Distribution displays the probability distribution of number of failures before the first success. This can be applied in our case because we have 	cases where the Failure Counts (FC) is zero and that point marks the first success.
+	- Discrete Weibull are used to describe various types of observed failures of components and phenomena. They are widely used in reliability analysis therefore 	it should be a good fit in our situation. 
+
+Next, we will graph those 4 Hazard Functions on C-SFRAT like the following images: 
+
+Based on the Model Comparison table, we observed that the Log-Likelihood column is ranking in the ascending order as following: DW2, IFRGSB, GM, and S. And as we know, likelihood method is a measure of how well a particular model fits the data. Thus, the higher the value, the better the model would be accurate corresponding to our original inputs. As a result, we pick Geometric Distribution and S Distribution as the two main models for our next analysis step. 
+
+### Result of Range Analysis
+
+Based on Intensity Graph, the group believed failure datas from interval 6 to interval 12 are the best fit for Range Analysis. The reason we chose this subset of the data because we believe it will give us the most stable reliability and stable growth. 
+
+Based on the graph above
+
+### Plots for failure rate and reliability of the SUT for the test data provided
+
+> Insert Plot for failure rate
+This is the plot for failure rate at range 6th to 12th interval. (38.061 - 14.577)/(12-6) = 3.914 failures/interval
+The slope of the plot describes for every interval of time unit, there are 3.914 new failures discovered in average. 
+
+> Insert Plot for Intensity failures
+This is the plot of intensity failures. The reason why are using this is that C-SFRAT does not support the reliability failures graph. However, it can be derived from the intensity failures. In observation, the peak of intensity is at the 9th interval where the value is hike upto 8.116 falures, which also means this is where the program has the lowest reliability. Whereas, at 6-7th interval, there are only approximate 2 failures, thus, they have highest reliabilty scores. 
+
+### A discussion on decision making given a target failure rate
+With MTTF (Average failure rate), we can use it to calculate System Reliabilty by the formula `slide 31 of https://d2l.ucalgary.ca/d2l/le/content/422916/viewContent/5232989/View`. 
+The result is the slope can be used to estimate two things: 
+- The remaining bugs haven't been identified. By extending the original `Failure rate versus Number of failure graph` with this slope we can achieve the number of total bugs of the original failures at the x-intercept. 
+- The remaining runtime needed to remove all the bugs. By extending the original `Failure rate versus Time graph` with this slope we can achieve the number of end time that all bugs are removed at the x-intercept.
+With these information, the team can debate whether they should continue with the current SUT or stop the process to improve the SUT. Decision will depend on the resources allowance.
+
+
+### A discussion on the advantages and disadvantages of reliability growth analysis 
+
+- Avantages: 
+	+ Reliability Growth Testing produces visuallized graphs that shows the failure rates (relationship between failure to time intervals), which are important when 	developing a product.
+	+ RTG is also used to predict the data behaviour in the future to provide us information for making decisions on the product. Specifically, we can use the 	average failure rates in a range of intervals to calculate the System Reliabilty which is used to identify the remaining bugs and remaining time that is needed 	to remove the excessive bugs. 
+	+ RTG allows us to backtrack the causes of system failures by identifying the highest failure peaks. 
+-Disavantages:
+	+ It depends on large number of fail cases in order to be accurate.
+	+ There can be a lot of noisy data when analysising the inputs and drawing the graphs.
+	+ The graphs are difficult to understand and need high-level knowledge in statistic and quality assurance to utilize it 
+
+
